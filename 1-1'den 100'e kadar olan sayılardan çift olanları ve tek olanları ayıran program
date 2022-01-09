@@ -1,0 +1,19 @@
+# For Döngüsü İle
+
+for x in range(1,101):
+
+    if x % 2==0:
+        print(f"ÇİFT => {x}")
+    else:
+        print(f"TEK => {x}")
+
+
+# While Döngüsü İle
+
+x=1
+while x<101:
+    if x % 2==0:
+        print(f"ÇİFT => {x}")
+    else:
+        print(f"TEK => {x}")
+    x+=1
