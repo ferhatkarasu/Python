@@ -1,0 +1,16 @@
+
+
+
+#Üç sayıdan en büyüğünü ekrana yazan program
+
+
+number1=int(input("Birinci sayıyı giriniz:"))
+number2=int(input("İkinci sayıyı giriniz:"))
+number3=int(input("Üçüncü sayıyı giriniz:"))
+
+if number1>number2 and number1>number3:
+    print("en büyük sayi {}".format(number1))
+elif number2>number1 and number2>number3:
+    print("en büyük sayi {}".format(number2))
+else:
+    print("En büyük sayi {}".format(number3))
