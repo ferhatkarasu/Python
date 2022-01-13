@@ -1,0 +1,15 @@
+
+
+
+final=int(input("Lütfen final puanınzı giriniz:"))
+vize=int(input("Lütfen vize puanınzı giriniz:"))
+
+ortalama=final*0.60+vize*0.40
+print("Ortalama : {}".format(ortalama))
+
+if ortalama>=50:
+    print("Tebrikler Geçtiniz")
+else:
+    print("Kaldınız")
+
+
