@@ -1,8 +1,8 @@
 
 
 
-final=int(input("Lütfen final puanınzı giriniz:"))
-vize=int(input("Lütfen vize puanınzı giriniz:"))
+final=int(input("Lütfen final puanınızı giriniz:"))
+vize=int(input("Lütfen vize puanınızı giriniz:"))
 
 ortalama=final*0.60+vize*0.40
 print("Ortalama : {}".format(ortalama))
