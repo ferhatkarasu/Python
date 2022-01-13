@@ -45,7 +45,7 @@ while i<3:
     i=i+1
     while j<4:
         j+=1
-        deger=deger+" -*- "
+        deger=deger+" % "
     print(deger)
     deger=""
     j=0
