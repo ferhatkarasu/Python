@@ -1,0 +1,11 @@
+
+
+sayı=int(input("Lütfen bir sayı giriniz,çıkmak için 0'a basınız: "))
+toplam=0
+while sayı!=0:
+    toplam=toplam+sayı
+    sayı = int(input("Lütfen bir sayı giriniz,çıkmak için 0'a basınız : "))
+
+print(toplam)
+
+
