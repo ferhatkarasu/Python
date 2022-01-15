@@ -1,0 +1,16 @@
+
+
+sayi=int(input("lutfen sayi giriniz :"))
+
+yuzler=int(sayi/100)
+sayi=sayi-yuzler*100
+
+onlar=int(sayi/10)
+sayi=sayi-onlar*10
+
+birler=int(sayi)
+toplam=yuzler+onlar+birler
+
+print(toplam)
+
+
