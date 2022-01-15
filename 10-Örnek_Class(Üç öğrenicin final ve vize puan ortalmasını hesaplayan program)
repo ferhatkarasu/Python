@@ -1,0 +1,32 @@
+
+
+class Ogrenci():
+
+    def __init__(self,adsoyad,final,vize):
+        self.adsoyad=adsoyad
+        self.final=final
+        self.vize=vize
+
+    def NotHesapla(self):
+
+        return (self.final*0.60+self.vize*0.40)
+
+isim1=input("Birinci öğrencinin adı : ")
+f1=int(input("Final notu : "))
+v1=int(input("Vize notu : "))
+o1=Ogrenci(isim1,f1,v1)
+
+isim2=input("İkinci öğrencinin adı : ")
+f2=int(input("Final notu : "))
+v2=int(input("Vize notu : "))
+o2=Ogrenci(isim2,f2,v2)
+
+isim3=input("Üçüncü öğrencinin adı : ")
+f3=int(input("Final notu : "))
+v3=int(input("Vize notu : "))
+o3=Ogrenci(isim3,f3,v3)
+
+print("{} adlı kişinin not ortalaması : {}".format(isim1,o1.NotHesapla()))
+print("{} adlı kişinin not ortalaması : {}".format(isim2,o2.NotHesapla()))
+print("{} adlı kişinin not ortalaması : {}".format(isim3,o3.NotHesapla()))
+
