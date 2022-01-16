@@ -1,0 +1,24 @@
+
+class Ogrenci:
+    Ogrenci_sayisi = 0
+
+    def __init__(self, adi, numarasi):
+        self.adi = adi
+        self.numarasi = numarasi
+        Ogrenci.Ogrenci_sayisi += 1
+
+    def OgrenciSayisiGoster(self):
+        print("Toplam öğrenci: %d" % Ogrenci.Ogrenci_sayisi)
+
+    def OgrenciGoster(self):
+        print("Adi : ", self.adi, "\nNumarası: ", self.numarasi)
+
+
+o1 = Ogrenci("python", 1234)
+o1.OgrenciGoster()
+o1.OgrenciSayisiGoster()
+print("-------------")
+o2 = Ogrenci("gitHub", 4321)
+o2.OgrenciGoster()
+o2.OgrenciSayisiGoster()
+
