@@ -1,0 +1,20 @@
+
+
+username="python"
+password="1234"
+
+while True:
+    kullaniciadi = input("Kullanici adinizi giriniz:")
+    parola = input("Sifrenizi giriniz:")
+
+    if kullaniciadi==username and parola==password:
+        print("Giris Başarılı Tebrikler.")
+        break
+    elif kullaniciadi==username and parola!=password:
+        print("Yanliş sifre girdiniz,tekrar deneyiniz.")
+    elif kullaniciadi!=username and parola==password:
+        print("Yanlis kullanici adini girdiniz,tekrar deneyiniz.")
+    else:
+        print("Hesap bulunamadi.")
+        
+        
