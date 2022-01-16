@@ -1,0 +1,17 @@
+
+sayi1=int(input("Birinci sayiyi giriniz:"))
+sayi2=int(input("İkinci sayiyi giriniz:"))
+secim=int(input("1-Toplama işlemi\n2-Çıkarma işlemi\n3-Çarpma işlemi\n4-Bölme işlemi\nBir islem seciniz:"))
+
+if secim==1:
+    print(sayi1+sayi2)
+elif secim==2:
+    print(sayi1-sayi2)
+elif secim==3:
+    print(sayi1*sayi2)
+elif secim==4:
+    print(sayi1/sayi2)
+
+else:
+    print("Hatalı seçim yaptınız!!!")
+
