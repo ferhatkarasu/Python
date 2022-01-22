@@ -1,0 +1,35 @@
+
+
+
+import random
+
+i=0
+bjk=0
+fb=0
+while i<=4:
+    i+=1
+    sayilar = [0,1, 2, 3, 4, 5]
+    sayilar1 = [0,1, 2, 3, 4, 5]
+    skor = random.choice(sayilar)
+    skor1 = random.choice(sayilar1)
+    besiktas=skor
+    fenerbahce=skor1
+
+    if besiktas>fenerbahce:
+        bjk+=1
+
+    elif besiktas==fenerbahce:
+        bjk+=1
+        fb+=1
+    else:
+        fb += 1
+
+    print("Besiktas : {} - Fenerbahce : {}".format(besiktas,fenerbahce))
+if bjk>fb:
+    print("Kazanan Takım Besiktas.")
+elif fb==bjk:
+    print("Berabere")
+else:
+    print("Kazanan Takım Fenerbahce")
+    
+    
