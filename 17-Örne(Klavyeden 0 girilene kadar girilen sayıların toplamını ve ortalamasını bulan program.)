@@ -1,0 +1,18 @@
+
+
+#Klavyeden 0 girilene kadar girilen sayıların toplamını ve ortalamasını bulan program.
+
+
+
+toplam=0
+i=-1
+while True:
+    sayi=int(input("Bir sayı giriniz :"))
+    toplam=toplam+sayi
+    i+=1
+    if sayi==0:
+        break
+
+i=toplam/i
+print("Girilen sayıların Toplamı:",toplam)
+print("Girilen sayıların Ortalaması:",int(i))
