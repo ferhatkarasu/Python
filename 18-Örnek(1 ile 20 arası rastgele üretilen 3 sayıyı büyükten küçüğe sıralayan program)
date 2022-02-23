@@ -1,0 +1,30 @@
+
+
+
+import random
+
+number1=random.randint(1,20)
+number2=random.randint(1,20)
+number3=random.randint(1,20)
+
+print("Number_One -> {}".format(number1))
+print("Number_Two -> {}".format(number2))
+print("Number_Three -> {}".format(number3))
+print("***********************************")
+if number1>number2 and number1>number3:
+    print("En büyük sayı -> {}".format(number1))
+elif number2>number1 and number2>number3:
+    print("En büyük sayı _> {}".format(number2))
+elif number3>number1 and number3>number2:
+    print("En büyük sayı -> {}".format(number3))
+else:
+    print("İki sayı eşittir")
+print("***********************************")
+num=[number1,number2,number3]
+num.sort()
+#print("Küçükten büyüğe sayılar -> {}".format(num))
+print("Küçükten büyüğe sayılar -> {} < {} < {}".format(num[0],num[1],num[2]))
+print("***********************************")
+print("Büyükten küçüğe sayılar -> {} > {} > {}".format(num[2],num[1],num[0]))
+print("***********************************")
+
