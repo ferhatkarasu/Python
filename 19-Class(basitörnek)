@@ -1,0 +1,18 @@
+
+
+class Calisan():
+
+    def __init__(self,isim,maas,departman):
+        print("init fonksiyonu calistirildi")
+        self.isim=isim
+        self.maas=maas
+        self.departman=departman
+
+    def bilgilerGoster(self):
+        print("Çalışanların bilgisi getirildi...")
+        print(" İsim : {} \n Maaş : {} \n Departman : {} ".format(self.isim,self.maas,self.departman))
+
+
+calisan=Calisan("ferhat karasu",0000,"python")
+calisan.bilgilerGoster()
+
