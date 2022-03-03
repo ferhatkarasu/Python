@@ -1,0 +1,50 @@
+
+
+import random
+
+toplam = 0
+dizim=[]
+for a in range(10):
+    sayilar = random.randint(1, 20)
+    dizim.append(sayilar)
+    toplam = sayilar + toplam
+
+def main():
+
+    while True:
+
+        print("1-Tüm Sayıları Görüntüle\n2-Aritmetik Ortalamasını Alın\n3-Çıkış Yap")
+        secim=int(input("Seç : "))
+        if secim==1:
+            for a in range(10):
+                print(dizim[a])
+
+        elif secim==2:
+            for a in range(10):
+                print(dizim[a])
+            print(f"Sayıların Toplamı => {toplam}")
+            print("Sayilarin Aritmetik Ortalamasi => {} ".format(toplam/10))
+        elif secim==3:
+            print("Çıkış yapılıyor...bye bye")
+            quit()
+        else:
+            print("Hatalı işlem yaptınız ,yeniden deneyiniz.")
+
+try:
+    main()
+except ValueError:
+    print("Hatalı işlem yaptınız ,yeniden deneyiniz.")
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
