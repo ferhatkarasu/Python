@@ -1,0 +1,68 @@
+
+
+
+
+masalar = dict()
+for a in range(21):
+    masalar[a] = 0
+
+
+def ekle():
+    masano = int(input("Masa No:"))
+    gecerli = masalar[masano]
+    eklenecek = float(input("Eklenecek tutar:"))
+    toplam = gecerli + eklenecek
+    masalar[masano] = int(toplam)
+
+
+def sil():
+    masano = int(input("Masa No:"))
+    gecerli = masalar[masano]
+    eksilecek = float(input("Eksilicek tutar:"))
+    toplam = gecerli - eksilecek
+
+    if toplam < 0:
+        print("işlemde hata var")
+    else:
+        masalar[masano] = int(toplam)
+
+
+def main():
+    while True:
+
+
+        print("""
+                Lokanta Ugulamasına Hoşgeldiniz!
+
+        1)Masaları Görüntüle
+        2)Hesap Ekle
+        3)Hesap Sil
+        4)Çıkış
+             """)
+        secim = input("İşlem numarasını giriniz:")
+        if secim == "1":
+            for a in range(21):
+                print("Masa {} için hesap : {} ".format(a, masalar[a]))
+            print("İşlemiz tamamlandı. Ana menüye dönmek için Enter'a basınız.")
+            input()
+
+        elif secim == "2":
+            ekle()
+            print("İşleminiz tamamlandı. Ana menüye dönmek için Enter'a basınız.")
+            input()
+
+        elif secim == "3":
+            sil()
+            print("İşleminiz tamamlandı. Ana menüye dönmek için Enter'a basınız.")
+            input()
+
+        elif secim == "4":
+            quit()
+
+        else:
+            print("Yanlış seçim yaptınız ana menüye dönünüz.")
+            input()
+
+
+main()
+
