@@ -1,0 +1,64 @@
+
+#Lokanta Uygulaması2
+
+masalar=dict()
+for x in range(21):
+    masalar[x] = 0 
+
+def secim():
+    try:
+        masano=int(input("Masa No:"))
+        gecerli=masalar[masano]
+        print("Hesap Tutarı = {} TL".format(gecerli))
+    except KeyError:
+        print("Masa numarasını yanlış girdiniz!!!")
+
+def ekle():
+    masano = int(input("Masa No:"))
+    gecerli = masalar[masano]
+    eklenecek =int(input("Eklenecek tutar:"))
+    toplam = gecerli + eklenecek
+    masalar[masano] = toplam
+    print("İşlem Tamamlandı")
+
+
+def sil():
+    masano = int(input("Masa No:"))
+    gecerli = masalar[masano]
+    eksilecek = int(input("Eksilicek tutar:"))
+    toplam = gecerli - eksilecek
+    if toplam < 0:
+        print("işlemde hata var")
+    else:
+        masalar[masano] = toplam
+        print("İşlem Tamamlandı")
+def main():
+    try:
+
+        while True:
+            print("*****İŞLEMLER*****")
+            print("1-Tüm Masaları Görüntüle\n2-Tek Bir Masayı Görüntüle\n3-Hesap Ekle\n4-Hesap Sil\n5-Çıkış Yap")
+            islem=int(input("Seç => "))
+            if islem==1:
+                for y in range(21):
+                    print("Masa {} için hesap : {} ".format(y, masalar[y]))
+
+            elif islem == 2:
+                secim()
+                print("Devam etmek için bir tuşa basınız.")
+                input()
+
+            elif islem == 3:
+                ekle()
+            elif islem == 4:
+                sil()
+            elif islem == 5:
+                quit()
+            else:
+                print("Hatalı İşlem Yaptınız,Tekrar Deneyiniz.")
+
+    except ValueError:
+        print("Hatalı İşlem yaptınız.")
+        main()
+
+main()
