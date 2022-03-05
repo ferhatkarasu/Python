@@ -1,0 +1,18 @@
+
+
+def sezar(text,key):
+    sifreliMetin=""
+    alfabe=[ 'a', 'b', 'c', 'ç','d', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+        'n', 'o','ö', 'p', 'q', 'r', 's', 't', 'u','ü', 'v', 'w', 'x', 'y', 'z']
+
+    for i in text:
+        sifreliMetin+=alfabe[(alfabe.index(i)+key)%len(alfabe)]
+    print(f"Sifreli mesaj:{sifreliMetin}")
+
+try:
+    anahtar=int(input("Anahtar sayi : "))
+    metin=input("Sifreleyeceğiniz Metin : ")
+    sezar(metin, anahtar)
+except ValueError:
+    print("Hatalı işlem yaptınız,tekrar deneyiniz")
+
