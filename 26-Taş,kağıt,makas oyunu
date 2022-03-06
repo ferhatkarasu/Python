@@ -1,0 +1,77 @@
+
+
+
+import random
+import os
+
+def oyun():
+    oyuncuSkor = 0
+    bilgisayarSkor = 0
+    i = 0
+    while i<5:
+        i+=1
+        secimler=["tas","kagit","makas"]
+        bilgisayar=random.choice(secimler)
+        oyuncu=input("Bir seçim yapınız (tas,kagit,makas) : ")
+
+        if oyuncu=="tas":
+            print(f"Oyuncu : {oyuncu}")
+            print(f"Bilgisayar : {bilgisayar}")
+            if bilgisayar=="kagit":
+                print("Bilgisayar + 1")
+                bilgisayarSkor+=1
+            elif bilgisayar=="makas":
+                print("Oyuncu + 1")
+                oyuncuSkor+=1
+            else:
+                print("Berabere")
+
+        elif oyuncu=="kagit":
+            print(f"Oyuncu : {oyuncu}")
+            print(f"Bilgisayar : {bilgisayar}")
+            if bilgisayar=="makas":
+                print("Bilgisayar + 1")
+                bilgisayarSkor += 1
+            elif bilgisayar=="tas":
+                print("Oyuncu + 1")
+                oyuncuSkor += 1
+            else:
+                print("Berabere")
+
+        elif oyuncu=="makas":
+            print(f"Oyuncu : {oyuncu}")
+            print(f"Bilgisayar : {bilgisayar}")
+            if bilgisayar=="tas":
+                print("Bilgisayar + 1")
+                bilgisayarSkor += 1
+            elif bilgisayar=="kagit":
+                print("Oyuncu + 1")
+                oyuncuSkor += 1
+            else:
+                print("Berabere")
+
+        else:
+            print("Hatalı seçim yaptınız tekrar deneyiniz...")
+            i-=1
+
+    if oyuncuSkor>bilgisayarSkor:
+        print(f"Oyuncunun Toplam Puanı : {oyuncuSkor} - Bilgisayarın Toplam Skoru : {bilgisayarSkor} \nOyuncu Kazandı")
+    elif bilgisayarSkor>oyuncuSkor:
+        print(f"Oyuncunun Toplam Puanı : {oyuncuSkor} - Bilgisayarın Toplam Skoru : {bilgisayarSkor} \nBilgisayar Kazandı")
+    else:
+        print("Berabere")
+
+oyun()
+
+while True:
+    tekrar_Oyna = input("Tekrar Oynamak İstermizini Evet(E,e) Hayır(H,h) : ").lower()
+    if tekrar_Oyna=="e":
+        print("Hoşgeldin")
+        os.system("cls")
+        oyun()
+    else:
+        os.system("cls")
+        print("Hoşçakalın")
+        break
+
+
