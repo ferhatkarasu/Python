@@ -1,0 +1,38 @@
+# A ve B matrislerinin elemanlarını toplayıp C matrisine yazdıran program.
+
+import random
+
+i=1
+j=1
+a=list()
+b=list()
+while i<=3:
+    i+=1
+    aGecici=list()
+    bGecici=list()
+    while j<=3:
+        j+=1
+        x=random.randint(1,10)
+        y=random.randint(1,10)
+        aGecici.append(x)
+        bGecici.append(y)
+    j=1
+    a.append(aGecici)
+    b.append(bGecici)
+
+c=list()
+
+aSatir=len(a)
+aSutun=len(a[0])
+
+for satirIndex in range(aSatir):
+    cSayi=list()
+    for sutunIndex in range(aSutun):
+        aSayi=a[satirIndex][sutunIndex]
+        bSayi=b[satirIndex][sutunIndex]
+        toplam=aSayi+bSayi
+        cSayi.append(toplam)
+    c.append(cSayi)
+
+print("a matrisi:\n{}\n{}\n{} \nb matrisi:\n{}\n{}\n{}".format(a[0],a[1],a[2],b[0],b[1],b[2]))
+print("c matrisi:\n{}\n{}\n{}".format(c[0],c[1],c[2]))
