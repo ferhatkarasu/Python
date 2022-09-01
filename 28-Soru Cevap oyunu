@@ -1,0 +1,51 @@
+
+
+
+def oyun():
+
+    tahminler = []
+    dogru_tahminler = 0
+    soru_num = 1
+    s=0
+
+    for key in sorular:
+        print("-------------------------")
+        print(key)
+
+        for i in secenekler[soru_num-1]:
+            print(i)
+        tahmin = input("Şıklardan Birini Seçiniz (A, B, C, yada D): ")
+        tahmin = tahmin.upper()
+        tahminler.append(tahmin)
+        dogru_tahminler+=cevap_kontrol(cevaplar[soru_num-1],tahminler[soru_num-1])
+        soru_num +=1
+
+    print("Cevaplar : {}".format(cevaplar))
+    print("Tahminler :{}".format(tahminler))
+    print("PUANINIZ : {} ".format(dogru_tahminler*25))
+
+def cevap_kontrol(cevaplar,tahminler):
+    if tahminler==cevaplar:
+        print("DOĞRU")
+        return 1
+    else:
+        print("YANLIŞ")
+        return 0
+
+sorular = [
+ "Türkiye'nin Başkenti Neresidir?: ",
+ "Almanya'nın Başkenti Neresidir?: ",
+ "İngiltere'nin Başkenti Neresidir?: ",
+ "Azerbaycan'nın Başkenti Neresidir?: "
+]
+
+secenekler = [["A. Ankara", "B. Londra", "C. Berlin", "D. Paris"],
+          ["A. Paris", "B. Berlin", "C. Bakü", "D. Ankara"],
+          ["A. Paris", "B. Bakü", "C. Londra", "D. Ankara"],
+          ["A. Bakü","B. Ankara", "C. Berlin", "D. Londra"]]
+
+cevaplar=["A","B","C","A"]
+
+oyun()
+
+
