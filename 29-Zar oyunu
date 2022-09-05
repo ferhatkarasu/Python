@@ -1,0 +1,17 @@
+# Zarlar 6 6 gelince sonlanan program
+
+import time
+import random
+
+i=0
+
+while True:
+    i+=1
+    zar1=random.randint(1,6)
+    zar2=random.randint(1,6)
+    print("""Deneme {}:\t({},{}) *** """.format(i, zar1, zar2))
+    time.sleep(0.5)
+    if zar1==6 and zar2==6:
+
+        print("{} Denemede zarlar 6 6 geldi".format(i))
+        break
