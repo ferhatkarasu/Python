@@ -1,0 +1,17 @@
+
+"""
+Tam biletin fiyatı 10 TL,öğrenci biletin fiyatı 7 TL olan bir sinema salonuna giden 3 çocuklu(öğrenci) bir ailenin
+ödemesi gereken toplam ücreti bulan programı giriniz.
+"""
+
+biletOgr=7
+biletTam=10
+toplam=0
+
+tam=int(input("Kaç Tane Tam Bileti  :"))
+ogrenci=int(input("Kaç Tane Öğrenci Bileti :"))
+
+toplam=biletTam*tam+biletOgr*ogrenci
+
+print("Toplam Ödenecek Ücret : {}TL".format(toplam))
+
