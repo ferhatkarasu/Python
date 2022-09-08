@@ -1,0 +1,17 @@
+
+"""
+Klavyeden kullanıcı tarafından TL cinsinden para miktarını,
+yine kullanıcı tarafından girilen Euro ve Dolar kuruna gören,
+TL'nin kaç Euro ve DOlar oldupunu bulan program.
+"""
+
+
+tl=float(input("TL cinsinden para miktarını giriniz :"))
+euro_kur=float(input("Euro kurunu griniz :"))
+dolar_kur=float(input("Dolar kurunu giriniz :"))
+euro=tl/euro_kur
+dolar=tl/dolar_kur
+
+print("{} TL = {} Euro".format(tl,str(euro)[:6]))
+print("{} TL = {} Dolar".format(tl,str(dolar)[:6]))
+
