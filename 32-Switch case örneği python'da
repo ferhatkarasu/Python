@@ -1,0 +1,11 @@
+
+"""
+Girilen yabancı dile göre 'seni seviyorum' ifadesini kendi dilinde ekrana yazan prgoram.
+"""
+
+print("Diller \n1-TÜrkçe\n2-English\n3-Deutschland\n4-la France")
+case={1:"Seni Seviyorum",2:"I love you",3:"Ich liebe dich",4:"Je t'aime"}
+
+i=int(input("Seçiminiz :"))
+print(case.get(i))
+
