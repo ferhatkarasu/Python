@@ -11,6 +11,6 @@ Bu nedenle masaüstünüzde yer alan Pyhon uygulamasına sağ tıklayarak “Dos
 Daha sonra CMD ekranına gelelim ve “cd” yazdıktan sonra yukarıda resimde gördüğünüz “Scripts” klasörünü CMD sürükleyelim. Bu sayede klasörün konumu CMD ekranına yazılmış olacak. Ardından enter tuşuna basarak klasöre girelim.
 Buradan sonra “pip install pyinstaller” yazalım. Ardından enter tuşuna basalım ve kurulumu bekleyelim.
 
-Ardından CMD ekranımıza “pyinstaller.exe –onefile –windowed Programınızın yolu” şeklinde kodumuzu yazalım.  (- -onefile önünde çift tire bulunuyor.) Programınızın yolunu yine sürükleme işlemi ile kısa sürede yazabiliriz. Ardından enter tuşuna basarak .exe uygulamamızı birkaç saniye içerisinde hazır hale getirebiliriz.
+Ardından CMD ekranımıza “pyinstaller.exe –-onefile –-windowed Programınızın yolu” şeklinde kodumuzu yazalım.  (- -onefile önünde çift tire bulunuyor.) Programınızın yolunu yine sürükleme işlemi ile kısa sürede yazabiliriz. Ardından enter tuşuna basarak .exe uygulamamızı birkaç saniye içerisinde hazır hale getirebiliriz.
 Bu işlemleri yaptıktan sonra uygulamamız “Scripts” klasörü içerisinde “builds” klasörü içerisinde uygulamamız hazır olacaktır.
 Kaynak:https://onureroglu.com.tr/python-ile-yazilan-programi-exe-yapma/
