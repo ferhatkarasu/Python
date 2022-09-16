@@ -1,0 +1,10 @@
+
+import random
+
+toplam=[]
+for a in range(20):
+    masalar=[random.randint(1,100)]
+    toplam.append(masalar)
+print(toplam)
+yeniToplam=(sorted(toplam))
+print(yeniToplam)
