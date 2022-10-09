@@ -1,0 +1,20 @@
+
+
+import random
+liste=["a","b","c","ç","d","e","f","g","ğ","h","i","ı","j","k","l","m","n","o","ö","p","r","s","ş","t","u","ü","v","y","z"]
+liste2=["A","B","C","Ç","D","E","F","G","Ğ","H","İ","I","J","K","L","M","N","O","Ö","P","R","S","Ş","T","U","Ü","V","Y","Z"]
+liste3=["1","2","3","4","5","6","7","8","9","0"]
+liste.extend(liste2)
+liste.extend(liste3)
+
+sifre=[]
+a=1
+while a<=8:
+    a+=1
+    x = random.randint(0, 67)
+    yeniListe=liste[x]
+    sifre+=yeniListe
+
+yeniSifre=("".join(sifre))
+print("Şifreniz : {}".format(yeniSifre))
+
