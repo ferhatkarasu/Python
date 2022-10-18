@@ -1,0 +1,84 @@
+
+
+import random
+import string
+
+liste=string.ascii_letters
+liste2=string.punctuation
+liste3=string.digits
+yeni_liste=liste+liste2+liste3
+
+
+karekter_uzunlugu=int(input("0-Şifreniz Kaç Karekterden Oluşsun ? :"))
+secim=int(input("---İŞLEMLER--\n1-Sadece Rakam\n2-Sadece Harf\n3-Sadece Özel Karekter\n4-Hepsi\nSeç="))
+
+def islem1():
+    sifre = []
+    a = 1
+    while a <= karekter_uzunlugu:
+        a += 1
+        x = random.randint(0, 9)
+        gecici_liste = liste3[x]
+        sifre += gecici_liste
+
+    yeni_Sifre = ("".join(sifre))
+    print("Şifreniz : {}".format(yeni_Sifre))
+
+def islem2():
+    sifre = []
+    a = 1
+    while a <= karekter_uzunlugu:
+        a += 1
+        x = random.randint(0, 51)
+        gecici_liste = liste[x]
+        sifre += gecici_liste
+
+    yeni_Sifre = ("".join(sifre))
+    print("Şifreniz : {}".format(yeni_Sifre))
+
+def islem3():
+    sifre=[]
+    a=1
+    while a <= karekter_uzunlugu:
+        a += 1
+        x = random.randint(0, 31)
+        gecici_liste = liste2[x]
+        sifre += gecici_liste
+
+    yeni_Sifre = ("".join(sifre))
+    print("Şifreniz : {}".format(yeni_Sifre))
+
+def islem4():
+    sifre = []
+    a = 1
+    while a <= karekter_uzunlugu:
+        a += 1
+        x = random.randint(0, 93)
+        gecici_liste = yeni_liste[x]
+        sifre += gecici_liste
+
+    yeni_Sifre = ("".join(sifre))
+    print("Şifreniz : {}".format(yeni_Sifre))
+
+while True:
+
+    if secim == 1:
+        islem1()
+        break
+
+    elif secim == 2:
+        islem2()
+        break
+
+    elif secim == 3:
+        islem3()
+        break
+
+    elif secim == 4:
+        islem4()
+        break
+
+
+    else:
+        print("Hatalı İşlem Yaptınız,Tekrar Deneyiniz.")
+    break
