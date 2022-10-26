@@ -1,0 +1,124 @@
+
+import random
+
+liste=[1,2,3,4,5,6,7,8,9,10,11,12,13]
+liste1=[]
+
+a=0
+while a<5:
+    a+=1
+    x=random.choice(liste)
+    liste1.append(x)
+    liste.remove(x)
+
+print("Birinci Kart : {}".format(liste1[0]))
+
+secim=(input("Gelecek Kart {}'den Büyük mü Küçük mü(B/K): ".format(liste1[0])))
+if secim.upper()=="B":
+    if liste1[1]>liste1[0]:
+        print("Doğru")
+        print("İkinci Kart : {}".format(liste1[1]))
+    else:
+        print("İkinci Kart : {}".format(liste1[1]))
+        print("Yanlış,Kaybettiniz")
+        exit()
+
+elif secim.upper()=="K":
+    if liste1[1]<liste1[0]:
+        print("Doğru")
+        print("İkinci Kart : {}".format(liste1[1]))
+    else:
+        print("İkinci Kart : {}".format(liste1[1]))
+        print("Yanlış,Kaybettiniz")
+        exit()
+
+else:
+    print("Hatalı işlem yaptınız")
+    exit()
+
+
+secim2=(input("Gelecek Kart {}'den Büyük mü Küçük mü(B/K): ".format(liste1[1])))
+
+if secim2.upper()=="B":
+    if liste1[2]>liste1[1]:
+        print("Doğru")
+        print("Üçüncü Kart : {}".format(liste1[2]))
+    else:
+        print("Üçüncü Kart : {}".format(liste1[2]))
+        print("Yanlış,Kaybettiniz")
+        exit()
+
+elif secim2.upper()=="K":
+    if liste1[2]<liste1[1]:
+        print("Doğru")
+        print("Üçüncü Kart : {}".format(liste1[2]))
+    else:
+        print("Üçüncü Kart : {}".format(liste1[2]))
+        print("Yanlış,Kaybettiniz")
+        exit()
+else:
+    print("Hatalı işlem yaptınız")
+    exit()
+
+secim3=(input("Gelecek Kart {}'den Büyük mü Küçük mü(B/K): ".format(liste1[2])))
+if secim3.upper()=="B":
+    if liste1[3]>liste1[2]:
+        print("Doğru")
+        print("Dördüncü Kart : {}".format(liste1[3]))
+    else:
+        print(liste1[3])
+        print("Dördüncü Kart : {}".format(liste1[3]))
+        exit()
+
+elif secim3.upper()=="K":
+    if liste1[3]<liste1[2]:
+        print("Doğru")
+        print("Dördüncü Kart : {}".format(liste1[3]))
+    else:
+        print("Dördüncü Kart : {}".format(liste1[3]))
+        print("Yanlış,Kaybettiniz")
+        exit()
+
+else:
+    print("Hatalı işlem yaptınız")
+    exit()
+
+secim4=(input("Gelecek Kart {}'den Büyük mü Küçük mü(B/K): ".format(liste1[3])))
+if secim4.upper()=="B":
+    if liste1[4]>liste1[3]:
+        print("Doğru")
+        print("Beşinci Kart : {}".format(liste1[4]))
+    else:
+        print(liste1[4])
+        print("Beşinci Kart : {}".format(liste1[4]))
+        exit()
+
+elif secim4.upper()=="K":
+    if liste1[4]<liste1[3]:
+        print("Doğru")
+        print("Beşinci Kart : {}".format(liste1[4]))
+    else:
+        print("Beşinci Kart : {}".format(liste1[4]))
+        print("Yanlış,Kaybettiniz")
+        exit()
+else:
+    print("Hatalı işlem yaptınız")
+
+print("TEBRİKLER KAZANDINIZ")
+
+"""
+Birinci Kart : 6
+Gelecek Kart 6'den Büyük mü Küçük mü(B/K): b
+Doğru
+İkinci Kart : 9
+Gelecek Kart 9'den Büyük mü Küçük mü(B/K): b
+Doğru
+Üçüncü Kart : 12
+Gelecek Kart 12'den Büyük mü Küçük mü(B/K): k
+Doğru
+Dördüncü Kart : 11
+Gelecek Kart 11'den Büyük mü Küçük mü(B/K): k
+Doğru
+Beşinci Kart : 2
+TEBRİKLER KAZANDINIZ
+"""
