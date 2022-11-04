@@ -68,6 +68,7 @@ if secim3.upper()=="B":
     else:
         print(liste1[3])
         print("Dördüncü Kart : {}".format(liste1[3]))
+        print("Yanlış,Kaybettiniz")
         exit()
 
 elif secim3.upper()=="K":
@@ -91,6 +92,7 @@ if secim4.upper()=="B":
     else:
         print(liste1[4])
         print("Beşinci Kart : {}".format(liste1[4]))
+        print("Yanlış,Kaybettiniz")
         exit()
 
 elif secim4.upper()=="K":
