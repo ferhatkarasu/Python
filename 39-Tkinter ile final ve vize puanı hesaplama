@@ -1,0 +1,44 @@
+
+
+from tkinter import *
+
+pencere=Tk()
+pencere.title("Not Hesaplayacı")
+pencere.geometry("400x250")
+pencere.resizable(width=False, height=False)
+
+def hesapla():
+    f = float(final.get())
+    v = float(vize.get())
+    ortalama=f * 0.60 + v * 0.40
+    yazi= "GEÇTİNİZ \nNot Ortalaması = " + str(ortalama)
+    yazi2 = "KALDINIZ \nNot Ortalaması = " + str(ortalama)
+
+    if ortalama >=50:
+        L3.config(text=yazi)
+    else:
+        L3.config(text=yazi2)
+
+
+L1 = Label(pencere,font=5, text="Final")
+L1.place(x=75, y=15)
+
+final = Entry(pencere,font=5, width=20)
+final.place(x=77,y=45)
+
+L2 = Label(pencere, font=5,text="Vize")
+L2.place(x=75, y=80)
+
+vize = Entry(pencere,font=5, width=20)
+vize.place(x=77, y=110)
+
+btn = Button(pencere, text="HESAPLA", padx="25",pady="5", command=hesapla)
+btn.place(x=75,y=150)
+btn2=Button(text="ÇIKIŞ",padx="15",pady="5",command=pencere.quit)
+btn2.place(x=300,y=200)
+
+L3 = Label(pencere,text="SONUÇ",font=10,background="red")
+L3.place(x=75, y=190)
+
+pencere.mainloop()
+
