@@ -1,0 +1,53 @@
+
+from tkinter import *
+
+pencere=Tk()
+pencere.title("Büyük Sayıyı Bulma")
+pencere.geometry("450x300")
+pencere.configure(background="blue")
+
+def hesapla():
+    b = int(BirinciSayi.get())
+    i = int(IkinciSayi.get())
+    u = int(UcuncuSayi.get())
+    yazi1 = "En Büyük Sayı = " + str(b)
+    yazi2 = "En Büyük Sayı = " + str(i)
+    yazi3 = "En Büyük Sayı = " + str(u)
+
+    if b > i and b > u:
+        L4.config(text=yazi1)
+    elif i > b and i > u:
+        L4.config(text=yazi2)
+    else:
+        L4.config(text=yazi3)
+
+
+L1 = Label(pencere,background="red",font=5, text="1.Sayi")
+L1.place(x=75, y=15)
+
+BirinciSayi = Entry(pencere,font=5, width=20)
+BirinciSayi.place(x=77,y=45)
+
+L2 = Label(pencere, background="red",font=5,text="2.Sayi")
+L2.place(x=75, y=80)
+
+IkinciSayi = Entry(pencere,font=5, width=20)
+IkinciSayi.place(x=77, y=110)
+
+L3 = Label(pencere,background="red",font=5,text="3.Sayi")
+L3.place(x=75, y=145)
+
+UcuncuSayi = Entry(pencere,font=5, width=20)
+UcuncuSayi.place(x=77, y=175)
+
+btn = Button(pencere, text="HESAPLA", padx="25",pady="5", command=hesapla)
+btn.place(x=75,y=210)
+
+btn2=Button(text="ÇIKIŞ",padx="15",pady="5",command=pencere.quit)
+btn2.place(x=300,y=250)
+
+L4 = Label(pencere,text="SONUÇ",font=5,background="red")
+L4.place(x=75, y=250)
+
+pencere.mainloop()
+
