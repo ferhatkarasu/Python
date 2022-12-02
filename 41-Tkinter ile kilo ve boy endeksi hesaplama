@@ -1,0 +1,58 @@
+
+from tkinter import *
+
+pencere=Tk()
+pencere.title("💪 Vücut Kitle Endeksi Hesaplama 💪 ")
+pencere.geometry("450x300")
+pencere.configure(background="grey")
+
+
+def hesapla():
+    k = int(kilo.get())
+    b = float(boy.get())
+
+    endeks = k / (b * b)
+
+    yazi1 = "Zayıf , VKİ:" + str(endeks)
+    yazi2 = "Normal , VKİ:" + str(endeks)
+    yazi3 = "Kilolu , VKİ:" + str(endeks)
+    yazi4="Obez , VKİ:" + str(endeks)
+    yazi5="Ciddi Obez , VKİ:" + str(endeks)
+
+    if endeks < 18:
+        L3.config(text=yazi1[:18])
+    elif endeks >= 18 and endeks < 25:
+        L3.config(text=yazi2[:19])
+    elif endeks >= 25 and endeks < 30:
+        L3.config(text=yazi3[:19])
+    elif endeks >= 30 and endeks < 35:
+        L3.config(text=yazi4[:17])
+    else:
+        L3.config(text=yazi5[:23])
+
+
+
+L1 = Label(pencere, background="yellow",font=5,text="KİLO(kg)")
+L1.place(x=75, y=15)
+
+kilo = Entry(pencere,font=5, width=20)
+kilo.place(x=77, y=45)
+
+
+L2 = Label(pencere,background="yellow",font=5,text="BOY(m)")
+L2.place(x=75, y=100)
+
+boy = Entry(pencere,font=5, width=20)
+boy.place(x=77, y=130)
+
+
+btn = Button(pencere, text="HESAPLA", padx="25",pady="5", command=hesapla)
+btn.place(x=75,y=190)
+
+btn2=Button(text="ÇIKIŞ",padx="15",pady="5",command=pencere.quit)
+btn2.place(x=300,y=250)
+
+L3 = Label(pencere,text="SONUÇ",font=5,background="yellow")
+L3.place(x=75, y=230)
+
+pencere.mainloop()
