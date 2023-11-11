@@ -1,0 +1,16 @@
+
+num1=int(input("Enter the first number : "))
+num2=int(input("Enter the second number : "))
+operation=int(input("1 -> + \n2 -> - \n3 -> *\n4 -> /\nselect an operation : "))
+
+if operation==1:
+    print(num1+num2)
+elif operation==2:
+    print(num1-num2)
+elif operation==3:
+    print(num1*num2)
+elif operation==4:
+    print(num1/num2)
+
+else:
+    print("incorrect, try again!!!")
